@@ -43,8 +43,9 @@ The script is the only footage there is: the variants re-use its shots, so you n
    Keep each description short (up to ~8 words): the designer sees it next to the shot ID in the final table.
 3. If the source itself breaks a hard rule (e.g. the original hook says "magnets" or is 15 words), say so under the
    table. It does not block the work: the new hooks replace it, and check.py prints it as a warning.
-4. Ask for the body ID (the winner's ID or Meta ad name, e.g. `B01` or `SL_B01_lostsock_orig`). If the designer
-   has none, propose `B<YYMMDD>` and use it. The body ID links every variant to future ad results.
+4. Body ID: if the designer's message or the script names the winner (an ID or Meta ad name, e.g. `B01` or
+   `SL_B01_lostsock_orig`), use it. Otherwise use `B<YYMMDD>` (today's date). Never ask for it and do not
+   mention it in the message: it only shows up in the variant IDs.
 5. Show what you understood as one table and wait for confirmation or corrections:
 
    | segment | VO | on-screen | shot | shot description |
