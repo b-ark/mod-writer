@@ -37,7 +37,7 @@ the source script, `NEW: <scene>`, or a description in words (both marked `New f
 ### Tests
 
 ```
-uv sync && uv run pytest      # 75 tests
+uv sync && uv run pytest      # 76 tests
 ```
 
 ## How it works
@@ -50,10 +50,10 @@ uv sync && uv run pytest      # 75 tests
 3. **Check.** `scripts/check.py` rejects what breaks a hard rule. A separate reviewer then reads every variant
    as one ad and judges whether the hook leads into the script (`flow.json`). Rejected variants are rewritten,
    2 rounds at most.
-4. **Hand over.** The designer gets `passed.md`: per variant only what to cut (VO, on-screen text, shot with its
-   description), the scenes to film and nothing else. `passed.csv` has every column for the production sheet;
-   counts and rejection reasons stay in `summary.json` / `rejected.md`. Put the `variant_id` into the Meta ad
-   name so results can be matched back later.
+4. **Hand over.** The designer gets one file, `passed.xlsx`: every variant as the whole ad, part by part, with
+   columns for the picture, the voice-over and the on-screen text; new text is highlighted, notes say what to
+   record or film. Counts and rejection reasons stay in `summary.json` / `rejected.md`; `passed.csv` keeps the
+   `variant_id`s for matching ad results later.
 
 | Code | Rule |
 |---|---|

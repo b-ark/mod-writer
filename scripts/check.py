@@ -37,6 +37,7 @@ marked "pending flow" in passed.csv (passed.md says "Not final"): not final unti
 Exit code: 0 whenever the input was read and checked (rejections included), 2 if the input could not be read.
 
 Output (written to --out, default ./out). Only this script writes these files:
+  passed.xlsx (for the designer: every passed variant as the full ad, part by part, new text highlighted),
   passed.csv, passed.md, rejected.csv, rejected.md, summary.json, flow_review.md
 """
 
@@ -44,6 +45,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import zipfile
 import json
 import re
 import sys
@@ -51,6 +53,7 @@ from collections import Counter
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 # ---------------------------------------------------------------- rules
 MAX_ONSCREEN_WORDS = 5
@@ -703,6 +706,121 @@ def passed_md(kept: list[Variant], superseded: list[Variant], pending: int, desc
     return "\n".join(lines)
 
 
+
+# ---------------------------------------------------------------- passed.xlsx (the designer's file)
+# A minimal .xlsx written with the standard library: one sheet, inline strings, a few cell styles.
+XLSX_STYLES = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">
+<fonts count="3"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="14"/><name val="Calibri"/></font></fonts>
+<fills count="4"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FFFFF2CC"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFD9D9D9"/><bgColor indexed="64"/></patternFill></fill></fills>
+<borders count="2"><border><left/><right/><top/><bottom/><diagonal/></border><border><left/><right/><top style="medium"/><bottom/><diagonal/></border></borders>
+<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>
+<cellXfs count="7">
+<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>
+<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0" applyAlignment="1"><alignment wrapText="1" vertical="top"/></xf>
+<xf numFmtId="0" fontId="0" fillId="2" borderId="0" xfId="0" applyFill="1" applyAlignment="1"><alignment wrapText="1" vertical="top"/></xf>
+<xf numFmtId="0" fontId="1" fillId="3" borderId="0" xfId="0" applyFont="1" applyFill="1" applyAlignment="1"><alignment wrapText="1" vertical="center"/></xf>
+<xf numFmtId="0" fontId="2" fillId="0" borderId="0" xfId="0" applyFont="1"/>
+<xf numFmtId="0" fontId="1" fillId="0" borderId="1" xfId="0" applyFont="1" applyBorder="1" applyAlignment="1"><alignment wrapText="1" vertical="top"/></xf>
+<xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment wrapText="1" vertical="top"/></xf>
+</cellXfs>
+</styleSheet>"""
+X_PLAIN, X_NEW, X_HEAD, X_TITLE, X_VARIANT, X_FIRST = 1, 2, 3, 4, 5, 6
+XLSX_COLS = [("Variant", 11), ("Part", 10), ("Picture (what is in the shot)", 48), ("Voice-over (read aloud)", 48),
+             ("On-screen text", 30), ("Note", 26)]
+
+
+def col_letter(i: int) -> str:
+    out = ""
+    i += 1
+    while i:
+        i, r = divmod(i - 1, 26)
+        out = chr(65 + r) + out
+    return out
+
+
+def xml_text(text: str) -> str:
+    text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", str(text))
+    return escape(text)
+
+
+def write_xlsx(path: Path, rows: list[list[tuple[str, int]]], widths: list[float], freeze: int,
+               sheet: str = "Variants") -> None:
+    """rows: [[(text, style), ...], ...]; freeze: number of rows kept on top while scrolling."""
+    data = []
+    for r, row in enumerate(rows, start=1):
+        cells = "".join(f'<c r="{col_letter(c)}{r}" s="{st}" t="inlineStr"><is><t xml:space="preserve">'
+                        f'{xml_text(val)}</t></is></c>' if val else f'<c r="{col_letter(c)}{r}" s="{st}"/>'
+                        for c, (val, st) in enumerate(row))
+        data.append(f'<row r="{r}">{cells}</row>')
+    cols = "".join(f'<col min="{i}" max="{i}" width="{w}" customWidth="1"/>' for i, w in enumerate(widths, start=1))
+    pane = (f'<pane ySplit="{freeze}" topLeftCell="A{freeze + 1}" activePane="bottomLeft" state="frozen"/>'
+            if freeze else "")
+    ns = 'xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"'
+    rel = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+    parts = {
+        "[Content_Types].xml": '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+            '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+            '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>'
+            '<Default Extension="xml" ContentType="application/xml"/>'
+            '<Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>'
+            '<Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>'
+            '<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/>'
+            '</Types>',
+        "_rels/.rels": '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+            '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+            f'<Relationship Id="rId1" Type="{rel}/officeDocument" Target="xl/workbook.xml"/></Relationships>',
+        "xl/workbook.xml": f'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook {ns} xmlns:r="{rel}">'
+            f'<sheets><sheet name="{xml_text(sheet)}" sheetId="1" r:id="rId1"/></sheets></workbook>',
+        "xl/_rels/workbook.xml.rels": '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+            '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+            f'<Relationship Id="rId1" Type="{rel}/worksheet" Target="worksheets/sheet1.xml"/>'
+            f'<Relationship Id="rId2" Type="{rel}/styles" Target="styles.xml"/></Relationships>',
+        "xl/styles.xml": XLSX_STYLES,
+        "xl/worksheets/sheet1.xml": f'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet {ns}>'
+            f'<sheetViews><sheetView workbookViewId="0">{pane}</sheetView></sheetViews>'
+            f'<cols>{cols}</cols><sheetData>{"".join(data)}</sheetData></worksheet>',
+    }
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
+        for name, text in parts.items():
+            z.writestr(name, text)
+
+
+def picture(value: str, desc: dict[str, str]) -> str:
+    """What the designer puts on screen: the shot described in words, or the scene to film."""
+    if scene := described_scene(value):
+        return f"NEW FOOTAGE, film this: {scene}"
+    tag = re.compile(r"\s*\((?:problem|product|guess)\)", re.I)
+    shown = [tag.sub("", desc.get(sid, "")).strip(" -") or sid for sid in split_shots(value)]
+    return "; then ".join(shown)
+
+
+def passed_xlsx_rows(kept: list[Variant], pending: int, desc: dict[str, str]) -> list[list[tuple[str, int]]]:
+    """Every variant as the whole ad, part by part; what is new is highlighted."""
+    title = f"{plural(len(kept), 'variant')}. Yellow = new; everything else is as in the original video."
+    if pending:
+        title = f"NOT FINAL ({pending} still being checked). " + title
+    rows = [[(title, X_TITLE)], [(name, X_HEAD) for name, _ in XLSX_COLS]]
+    for n, v in enumerate(kept, start=1):
+        for i, (seg, vals) in enumerate(v.segments.items()):
+            changed = v.changed.get(seg, set())
+            base = X_FIRST if i == 0 else X_PLAIN
+            notes = []
+            if "shot" in changed and described_scene(vals.get("shot", "")):
+                notes.append("New footage to film")
+            elif "shot" in changed:
+                notes.append("Different shot from the video")
+            if "vo" in changed:
+                notes.append("New VO line: record")
+            cells = [picture(vals.get("shot", ""), {**desc, **({vals.get("shot", "").upper(): vals["shot_desc"]}
+                                                              if vals.get("shot_desc") else {})}),
+                     vals.get("vo", ""), vals.get("on_screen", "")]
+            styled = [(c, X_NEW if f in changed and c else base) for c, f in zip(cells, ("shot", "vo", "on_screen"))]
+            rows.append([(f"Variant {n}" if i == 0 else "", X_VARIANT if i == 0 else X_PLAIN),
+                         (seg_title(seg), base), *styled, ("; ".join(notes), base)])
+    return rows
+
+
 def write_outputs(variants: list[Variant], out: Path, summary: dict,
                   sources: dict[str, Segments] | None = None,
                   flow: dict[str, tuple[str, str]] | None = None) -> None:
@@ -720,6 +838,9 @@ def write_outputs(variants: list[Variant], out: Path, summary: dict,
             w.writeheader()
             w.writerows(rows)
 
+    write_xlsx(out / "passed.xlsx", passed_xlsx_rows(kept, summary.get("pending_flow", 0),
+                                                     shot_descriptions(sources or {})),
+               [w for _, w in XLSX_COLS], freeze=2)
     (out / "passed.md").write_text(
         passed_md(kept, [v for v in variants if v.superseded_by], summary.get("pending_flow", 0),
                   shot_descriptions(sources or {})), encoding="utf-8")
@@ -804,7 +925,7 @@ def main(argv: list[str] | None = None) -> int:
     fl = summary["flow"]
     print(f"flow: {fl['ok']} ok, {fl['break']} break, {len(fl['unreviewed'])} not reviewed"
           + (f" ({fl['file']})" if fl["file"] else " (no flow.json)"))
-    print(f"written to {a.out}/: passed.csv, passed.md, rejected.csv, rejected.md, summary.json, flow_review.md")
+    print(f"written to {a.out}/: passed.xlsx, passed.csv, passed.md, rejected.csv, rejected.md, summary.json, flow_review.md")
     return 0   # rejections are results, not errors: exit code 2 only when the input could not be read
 
 

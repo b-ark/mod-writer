@@ -539,3 +539,31 @@ def test_exit_code_is_zero_with_rejections(tmp_path):
                                 "variants": [hook_variant("V1", vo="Magnetic socks.")]}), encoding="utf-8")
     assert check.main([str(cand), "--out", str(tmp_path / "out")]) == 0
     assert check.main([str(tmp_path / "missing.json"), "--out", str(tmp_path / "out")]) == 2
+
+
+# ---- passed.xlsx: the designer's file
+def test_passed_xlsx_is_the_full_ad_per_variant(tmp_path):
+    import zipfile
+    import xml.etree.ElementTree as ET
+    variants = [{"variant_id": "V1", "changes": {"hook": {**GOOD_HOOK, "shot": "NEW: sock on the stairs"},
+                                                 "scene_3": {"on_screen": "Still a pair & more"}}},
+                hook_variant("V2", vo="Laundry day. Again.")]
+    _, result, summary = run(tmp_path, variants)
+    out = tmp_path / "out"
+    check.write_outputs(result, out, summary, {"B01": check.parse_source(SOURCE)})
+    with zipfile.ZipFile(out / "passed.xlsx") as z:
+        root = ET.fromstring(z.read("xl/worksheets/sheet1.xml"))
+        ET.fromstring(z.read("xl/styles.xml"))
+    ns = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+    rows = [["".join(c.itertext()) for c in r.findall("m:c", ns)] for r in root.find("m:sheetData", ns)]
+    assert rows[1] == ["Variant", "Part", "Picture (what is in the shot)", "Voice-over (read aloud)",
+                       "On-screen text", "Note"]
+    v1 = rows[2:2 + len(SOURCE["segments"])]
+    assert v1[0][:2] == ["Variant 1", "Hook"]
+    assert v1[0][2] == "NEW FOOTAGE, film this: sock on the stairs" and v1[0][5].startswith("New footage to film")
+    assert v1[1][2] == "laundry basket full of odd socks" and v1[1][3].startswith("Every laundry day")
+    assert v1[3][4] == "Still a pair & more"
+    assert rows[2 + len(SOURCE["segments"])][0] == "Variant 2"
+    assert not any("V1" in cell or "B01" in cell for row in rows for cell in row)
+    styles = {c.get("r"): c.get("s") for r in root.find("m:sheetData", ns) for c in r.findall("m:c", ns)}
+    assert styles["E6"] == str(check.X_NEW) and styles["E4"] != str(check.X_NEW)

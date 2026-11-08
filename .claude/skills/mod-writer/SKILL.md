@@ -22,8 +22,8 @@ The skill works in two places. Find out which one you are in once, at the start.
   folder is `runs/<body_id>-<YYYYMMDD-HHMM>/`, relative to the project root.
 - **App mode (Claude app, skill uploaded as a ZIP).** There is no project. check.py is at `scripts/check.py`
   inside this skill's own folder, next to `reference/`, and it finds `reference/` by itself. Make the run folder
-  `<body_id>-<YYYYMMDD-HHMM>/` in your working directory. At the hand-over, give the designer `passed.csv` and
-  `passed.md` as downloadable files.
+  `<body_id>-<YYYYMMDD-HHMM>/` in your working directory. At the hand-over, give the designer `passed.xlsx` as a
+  downloadable file.
 
 Below, `<check.py>` is the checker path and `<run>` is the run folder.
 
@@ -37,10 +37,12 @@ The script is the only footage there is: the variants re-use its shots, so you n
    past ~3 s (VO only, no timecodes), cut the hook at the first natural pause and say where you cut. If there is
    no explicit CTA, the last line with the offer is the CTA.
 2. For each segment take VO, on-screen text (empty if not given) and the visual. Number the script's visuals
-   `S01`, `S02`, ... in order of appearance, with a short description of each; a visual that repeats keeps its
+   `S01`, `S02`, ... in order of appearance, with a description of each; a visual that repeats keeps its
    number. If the script gives no visual for a segment, describe it from the VO and mark it "(guess)".
    Note which shots show the problem and which show the product (the reveal, the proof, the end card).
-   Keep each description short (up to ~8 words): the designer sees it next to the shot ID in the final table.
+   Write each description so a designer can find or film the shot from it alone: who is in it, where, what
+   happens, framing if known (e.g. "close-up: a woman pulls one sock out of the dryer and looks inside for the
+   other"). The final Excel shows this text, not the shot ID. A `NEW:` shot is described the same way.
 3. If the source itself breaks a hard rule (e.g. the original hook says "magnets" or is 15 words), say so under the
    table. It does not block the work: the new hooks replace it, and check.py prints it as a warning.
 4. Body ID: if the designer's message or the script names the winner (an ID or Meta ad name, e.g. `B01` or
@@ -183,14 +185,15 @@ flow review. If replacements fail, do one more round (`-r2`, `"round": 2`). Stop
 
 ## Step 4 - Hand over
 
-Show the designer the content of `<run>/passed.md` as is: it is written for the designer and already lists what
-to cut, the scenes to film and the edits that replace older variants. Add one line after it: the run folder,
-and that `passed.csv` goes into the production sheet with the `variant_id` kept in the Meta ad name.
+Give the designer `<run>/passed.xlsx` (app mode: as a downloadable file; project mode: its path). It is written
+for the designer: every variant as the whole ad, part by part (hook, scenes, CTA), with columns for the picture,
+the voice-over to read and the on-screen text; what is new is highlighted, and a note says when a VO line must
+be recorded or a shot filmed. Do not paste tables into the chat and do not hand over the CSV or md files.
 
-Nothing else: no pass counts, rejection reasons, FLOW breaks, rounds or warnings. That is the tool's own
-bookkeeping (in rejected.md and summary.json); give it only if the designer asks. The one exception is a
-warning the designer must act on that passed.md does not show (e.g. more than a quarter of the batch needs new
-footage): one plain sentence.
+In the chat write one or two plain sentences at most: how many variants are in the file, and anything the
+designer must act on that the file does not show (e.g. more than a quarter of the batch needs new footage).
+No pass counts, rejection reasons, FLOW breaks, rounds or warnings: that is the tool's own bookkeeping (in
+rejected.md and summary.json); give it only if the designer asks.
 
 ## Follow-up in the same run
 
@@ -206,4 +209,4 @@ designer may have put its `variant_id` in the production sheet or a Meta ad name
   check.py does not count it as a duplicate of the variant it replaces. Once the edit passes, the old one moves
   to "Replaced by edits" in passed.md. If the edit is rejected, the old one stays, so fix the edit as in Step 3
   (`<id>-e1-r1`, keeping `replaces`). An edit that changes scene VO gets `VO re-record needed`, like any variant.
-- Hand over as in Step 4, but show only the new or edited variants from passed.md.
+- Hand over as in Step 4: the updated passed.xlsx, and one sentence on what was added or changed.
