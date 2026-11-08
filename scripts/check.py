@@ -32,7 +32,7 @@ and has no verdict yet. A reviewer who did not write the variants (a fresh agent
 against reference/flow.md and writes flow.json next to the input (or pass --flow):
     {"reviewer": "...", "verdicts": [{"variant_id": "B01-V01", "verdict": "ok" | "break", "reason": "..."}]}
 On the next run "break" rejects the variant with code FLOW. A variant with no verdict yet passes the rules but is
-marked "pending flow" in passed.csv / passed.md: the tables are not final until no variant is pending.
+marked "pending flow" in passed.csv (passed.md says "Not final"): not final until no variant is pending.
 
 Exit code: 0 whenever the input was read and checked (rejections included), 2 if the input could not be read.
 
@@ -641,19 +641,66 @@ def flow_review_md(variants: list[Variant], sources: dict[str, Segments],
     return "\n".join(lines)
 
 
-MD_NOTE_COLS = ("vo_rerecord", "new_footage", "flow")
+def shot_label(value: str, desc: dict[str, str]) -> str:
+    """What the designer sees for a shot: "S02 · basket of odd socks", or "NEW: <scene>" for footage to film."""
+    if not value or not is_shot_ids(value):
+        return value
+    tag = re.compile(r"\s*\((?:problem|product|guess)\)", re.I)
+    parts = []
+    for sid in split_shots(value):
+        d = tag.sub("", desc.get(sid, "")).strip(" -")
+        parts.append(f"{sid} · {d}" if d else sid)
+    return ", ".join(parts)
 
 
-def md_view(cols: list[str], rows: list[dict[str, str]]) -> tuple[list[str], list[dict[str, str]], str]:
-    """passed.md is read in a chat: drop columns that are empty everywhere, move the ones that are the same in
-    every row (body_id, generator, round) into a line above the table, merge the flags into one "notes"."""
-    same = [c for c in ("body_id", "generator", "round") if rows and len({r.get(c, "") for r in rows}) == 1]
-    line = ", ".join(f"{c}: {rows[0][c]}" for c in same if rows[0].get(c))
-    rows = [{**r, "notes": "; ".join(x for c in MD_NOTE_COLS if (x := r.get(c, "")) and x != "ok")}
-            for r in rows]
-    keep = [c for c in cols if c not in same and c not in MD_NOTE_COLS] + ["notes"]
-    keep = [c for c in keep if c == "variant_id" or any(r.get(c) for r in rows)]
-    return keep, rows, line
+def seg_title(seg: str) -> str:
+    return {"hook": "Hook", "cta": "CTA"}.get(seg, seg.replace("_", " ").capitalize())
+
+
+FIELD_TITLE = {"vo": "VO", "on_screen": "on-screen", "shot": "shot"}
+
+
+def passed_md(kept: list[Variant], superseded: list[Variant], pending: int, desc: dict[str, str]) -> str:
+    """The designer's view: only what to cut. Hook-only batches are one table; a batch that also changes scenes
+    lists each variant as a short card. No counts, codes or warnings: those are in summary.json / rejected.md."""
+    bodies = ", ".join(dict.fromkeys(v.body_id for v in kept)) or "-"
+    lines = [f"# {bodies}: {plural(len(kept), 'variant')}", ""]
+    if pending:
+        lines += [f"> Not final: {plural(pending, 'variant')} still {'needs' if pending == 1 else 'need'} the hook-to-script check.", ""]
+
+    def q(text: str) -> str:
+        return f"\u201c{text}\u201d" if text else "-"
+
+    if all(set(v.changed) <= {"hook"} for v in kept):
+        lines += ["| ID | VO | On-screen | First shot |", "|---|---|---|---|"]
+        for v in kept:
+            cells = [v.variant_id, hook(v, "vo"), hook(v, "on_screen"), shot_label(hook(v, "shot"), desc)]
+            lines.append("| " + " | ".join(md_cell(c) for c in cells) + " |")
+        lines.append("")
+    else:
+        lines += ["Only what changes is listed; everything else stays as in the original.", ""]
+        for v in kept:
+            h = v.segments.get("hook", {})
+            lines += [f"**{v.variant_id}**",
+                      f"- Hook: {q(h.get('vo', ''))} · on-screen {q(h.get('on_screen', ''))} · "
+                      f"{shot_label(h.get('shot', ''), desc)}"]
+            for seg, fields in v.changed.items():
+                if seg == "hook":
+                    continue
+                vals = v.segments[seg]
+                bits = [f"{FIELD_TITLE[f]} {shot_label(vals[f], desc) if f == 'shot' else q(vals[f])}"
+                        for f in FIELDS if f in fields]
+                lines.append(f"- {seg_title(seg)}: " + " · ".join(bits))
+            if v.vo_rerecord:
+                lines.append("- **VO re-record needed**")
+            lines.append("")
+
+    if film := [(v.variant_id, scene) for v in kept for scene in v.new_footage]:
+        lines += ["## To film", ""] + [f"- {vid}: {scene.split(': ', 1)[1]}" for vid, scene in film] + [""]
+    if superseded:
+        lines += ["## Replaced by edits (do not use)", ""]
+        lines += [f"- {v.variant_id} -> {v.superseded_by}" for v in superseded] + [""]
+    return "\n".join(lines)
 
 
 def write_outputs(variants: list[Variant], out: Path, summary: dict,
@@ -673,25 +720,9 @@ def write_outputs(variants: list[Variant], out: Path, summary: dict,
             w.writeheader()
             w.writerows(rows)
 
-    pending = summary.get("pending_flow", 0)
-    title = "Passed variants" if not pending else "Passed the rules - flow review pending"
-    head = (f"{summary['passed']} of {plural(summary['total'], 'variant')} passed "
-            f"(first round: {summary['first_round_passed']} of {summary['first_round_total']}).")
-    if pending:
-        head = (f"**Not final: {plural(pending, 'variant')} still wait for the flow review"
-                f" (\"pending flow\" in notes).** " + head)
-    if superseded:
-        head += (f" {len(superseded)} earlier versions were replaced by their edits"
-                 " (listed at the end, not for production).")
-    if len(cols_passed) > len(BASE_COLS + FLAG_COLS):
-        head += " Scene and CTA columns show the new text; an empty cell means the original stays."
-    md_cols, md_rows, same = md_view(cols_passed, passed)
-    if same:
-        head += f" All rows: {same}."
-    warn = "".join(f"\n> Warning: {w}\n" for w in summary["warnings"])
-    old = f"\n## Superseded by edits\n\n{md_table(SUPERSEDED_COLS, superseded)}\n" if superseded else ""
     (out / "passed.md").write_text(
-        f"# {title}\n\n{head}\n{warn}\n{md_table(md_cols, md_rows)}\n{old}", encoding="utf-8")
+        passed_md(kept, [v for v in variants if v.superseded_by], summary.get("pending_flow", 0),
+                  shot_descriptions(sources or {})), encoding="utf-8")
     viol = "\n".join(f"- {c} ({REASON_TEXT.get(c, '')}): {n}" for c, n in summary["violations"].items())
     (out / "rejected.md").write_text(
         f"# Rejected variants\n\n{plural(summary['rejected'], 'variant')} rejected.\n\n{viol}\n\n"

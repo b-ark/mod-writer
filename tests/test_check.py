@@ -288,7 +288,7 @@ def test_superseded_listed_in_passed_md(tmp_path):
     with (out / "passed.csv").open(encoding="utf-8-sig") as f:
         rows = list(csv.DictReader(f))
     assert [(r["variant_id"], r["replaces"]) for r in rows] == [("V04-e1", "V04")]
-    assert "## Superseded by edits" in (out / "passed.md").read_text(encoding="utf-8")
+    assert "## Replaced by edits (do not use)" in (out / "passed.md").read_text(encoding="utf-8")
 
 
 def test_passed_has_a_column_per_changed_scene_field(tmp_path):
@@ -464,7 +464,7 @@ def test_pending_flow_is_marked(tmp_path):
         rows = {r["variant_id"]: r for r in csv.DictReader(f)}
     assert rows["V1"]["flow"] == "ok" and rows["V2"]["flow"] == "pending flow"
     md = (out / "passed.md").read_text(encoding="utf-8")
-    assert md.startswith("# Passed the rules - flow review pending") and "Not final: 1 variant " in md
+    assert "> Not final: 1 variant still needs the hook-to-script check." in md
     assert json.loads((out / "summary.json").read_text(encoding="utf-8"))["pending_flow"] == 1
 
 
@@ -475,18 +475,34 @@ def test_all_reviewed_is_final(tmp_path):
     write_flow(tmp_path, [{"variant_id": "V1", "verdict": "ok"}])
     out = tmp_path / "out"
     check.main([str(cand), "--out", str(out)])
-    assert (out / "passed.md").read_text(encoding="utf-8").startswith("# Passed variants")
+    assert "Not final" not in (out / "passed.md").read_text(encoding="utf-8")
 
 
-# ---- passed.md is compact: no empty columns, constant ones go above the table
-def test_passed_md_is_compact(tmp_path):
-    _, result, summary = run(tmp_path, [hook_variant("V1"), hook_variant("V2", vo="Laundry day. Again.")])
+# ---- passed.md is the designer's view: only what to cut
+def test_passed_md_hook_only_is_one_table(tmp_path):
+    _, result, summary = run(tmp_path, [hook_variant("V1"), hook_variant("V2", vo="Laundry day. Again.",
+                                                                          shot="NEW: sock on the stairs")])
     out = tmp_path / "out"
-    check.write_outputs(result, out, summary)
-    header = next(l for l in (out / "passed.md").read_text(encoding="utf-8").splitlines() if l.startswith("| "))
-    cols = [c.strip() for c in header.strip("|").split("|")]
-    assert cols == ["variant_id", "angle", "hook_vo", "hook_on_screen", "hook_shot", "notes"]
-    assert "All rows: body_id: B01, generator: mod-writer, round: 0." in (out / "passed.md").read_text(encoding="utf-8")
+    check.write_outputs(result, out, summary, {"B01": check.parse_source(SOURCE)})
+    md = (out / "passed.md").read_text(encoding="utf-8")
+    assert md.startswith("# B01: 2 variants")
+    assert "| ID | VO | On-screen | First shot |" in md
+    assert "| V1 | My dryer ate another sock today. | Dryer: 1, me: 0 | S01 · close-up: one sock alone on the bed |" in md
+    assert "## To film\n\n- V2: sock on the stairs" in md
+    for noise in ("Warning", "angle", "generator", "round", "passed", "flow"):
+        assert noise not in md
+
+
+def test_passed_md_scene_changes_are_cards(tmp_path):
+    variants = [{"variant_id": "V1", "changes": {"hook": GOOD_HOOK, "scene_3": {"on_screen": "Still a pair"},
+                                                 "scene_1": {"vo": "One more sock vanishes every wash."}}}]
+    _, result, summary = run(tmp_path, variants)
+    out = tmp_path / "out"
+    check.write_outputs(result, out, summary, {"B01": check.parse_source(SOURCE)})
+    md = (out / "passed.md").read_text(encoding="utf-8")
+    assert "**V1**" in md and "- Scene 3: on-screen \u201cStill a pair\u201d" in md
+    assert "- Scene 1: VO \u201cOne more sock vanishes every wash.\u201d" in md
+    assert "- **VO re-record needed**" in md and "| ID |" not in md
 
 
 # ---- flow_review.md shows the unchanged body once, not per variant

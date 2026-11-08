@@ -40,6 +40,7 @@ The script is the only footage there is: the variants re-use its shots, so you n
    `S01`, `S02`, ... in order of appearance, with a short description of each; a visual that repeats keeps its
    number. If the script gives no visual for a segment, describe it from the VO and mark it "(guess)".
    Note which shots show the problem and which show the product (the reveal, the proof, the end card).
+   Keep each description short (up to ~8 words): the designer sees it next to the shot ID in the final table.
 3. If the source itself breaks a hard rule (e.g. the original hook says "magnets" or is 15 words), say so under the
    table. It does not block the work: the new hooks replace it, and check.py prints it as a warning.
 4. Ask for the body ID (the winner's ID or Meta ad name, e.g. `B01` or `SL_B01_lostsock_orig`). If the designer
@@ -181,16 +182,14 @@ flow review. If replacements fail, do one more round (`-r2`, `"round": 2`). Stop
 
 ## Step 4 - Hand over
 
-Show the designer the content of `<run>/passed.md` as is, then a short note:
-- how many passed, how many passed in the first round;
-- the most common rejection reasons (from rejected.md), one line, or "none"; name the `FLOW` breaks the
-  reviewer found, if any;
-- which variants are `VO re-record needed`;
-- which variants need new footage (`New footage needed`), listed separately with the scene to film, so the
-  designer can cut the rest today and send these to production;
-- any other check.py warning in one line each (e.g. a hook on the same shot as scene_1);
-- the folder with all files (`passed.csv` is ready to paste into the production sheet; keep `variant_id` in the
-  Meta ad name so results can be matched back later).
+Show the designer the content of `<run>/passed.md` as is: it is written for the designer and already lists what
+to cut, the scenes to film and the edits that replace older variants. Add one line after it: the run folder,
+and that `passed.csv` goes into the production sheet with the `variant_id` kept in the Meta ad name.
+
+Nothing else: no pass counts, rejection reasons, FLOW breaks, rounds or warnings. That is the tool's own
+bookkeeping (in rejected.md and summary.json); give it only if the designer asks. The one exception is a
+warning the designer must act on that passed.md does not show (e.g. more than a quarter of the batch needs new
+footage): one plain sentence.
 
 ## Follow-up in the same run
 
@@ -204,6 +203,6 @@ designer may have put its `variant_id` in the production sheet or a Meta ad name
   line of V12"): add a new variant `<id>-e1` (then `-e2` for the next edit of the same one) with
   `"replaces": "<id>"`, the same angle, and the **full** `changes` of the old variant with the edit applied.
   check.py does not count it as a duplicate of the variant it replaces. Once the edit passes, the old one moves
-  to "Superseded by edits" in passed.md. If the edit is rejected, the old one stays, so fix the edit as in Step 3
+  to "Replaced by edits" in passed.md. If the edit is rejected, the old one stays, so fix the edit as in Step 3
   (`<id>-e1-r1`, keeping `replaces`). An edit that changes scene VO gets `VO re-record needed`, like any variant.
-- Hand over as in Step 4, but show only the new or edited rows, plus the passed / superseded counts.
+- Hand over as in Step 4, but show only the new or edited variants from passed.md.
