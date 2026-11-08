@@ -1,0 +1,540 @@
+{
+  "body_id": "B01",
+  "generator": "blind-test",
+  "source": {
+    "segments": [
+      {
+        "segment": "hook",
+        "vo": "Where do all the missing socks actually go?",
+        "on_screen": "Where do socks go?",
+        "shot": "S01"
+      },
+      {
+        "segment": "scene_1",
+        "vo": "Every laundry day, one more sock vanishes without a trace.",
+        "on_screen": "One more gone",
+        "shot": "S02"
+      },
+      {
+        "segment": "scene_2",
+        "vo": "So I tried socks that snap together with a tiny magnet.",
+        "on_screen": "They snap together",
+        "shot": "S03"
+      },
+      {
+        "segment": "scene_3",
+        "vo": "They go in as a pair and come out as a pair.",
+        "on_screen": "In pairs. Out pairs.",
+        "shot": "S04"
+      },
+      {
+        "segment": "scene_4",
+        "vo": "Five new pairs land at my door every quarter.",
+        "on_screen": "5 pairs every quarter",
+        "shot": "S05"
+      },
+      {
+        "segment": "cta",
+        "vo": "Take the quick quiz and get five pairs for $29.",
+        "on_screen": "5 pairs for $29",
+        "shot": "S06"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "variant_id": "AT-01",
+      "angle": "mystery",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "Where did my other sock go this time?",
+          "on_screen": "Gone. Again.",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-02",
+      "angle": "humor",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "Laundry day turned into a sock funeral.",
+          "on_screen": "RIP, left sock",
+          "shot": "S12"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-03",
+      "angle": "parent",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "Every mom knows this laundry basket.",
+          "on_screen": "The basket of shame",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-04",
+      "angle": "hack",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "Stop losing socks in the wash forever.",
+          "on_screen": "No more lonely socks",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-05",
+      "angle": "math",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "I counted my single socks. Forty-one.",
+          "on_screen": "41 lonely socks",
+          "shot": "S15"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-06",
+      "angle": "morning-rush",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "POV: you're late and find one sock.",
+          "on_screen": "POV: late, one sock",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-07",
+      "angle": "humor",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "The dryer is keeping secrets from you.",
+          "on_screen": "What the dryer hides",
+          "shot": "S14"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-08",
+      "angle": "question",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "Nobody talks about the sock problem enough.",
+          "on_screen": "We need to talk about socks",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-09",
+      "angle": "mystery",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "Where did my other sock go this time",
+          "on_screen": "Gone again",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-10",
+      "angle": "relationship",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "My husband swears the washer eats socks.",
+          "on_screen": "The washer did it",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-11",
+      "angle": "hack",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "This tiny laundry fix saved my mornings.",
+          "on_screen": "Tiny fix, calm mornings",
+          "shot": "S13"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-12",
+      "angle": "question",
+      "round": 0,
+      "generator": "atria",
+      "changes": {
+        "hook": {
+          "vo": "Your sock drawer doesn't have to look like this.",
+          "on_screen": "Sock drawer chaos",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-01",
+      "angle": "hack",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "These magnetic socks never lose their partner.",
+          "on_screen": "Socks that stay paired",
+          "shot": "S03"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-02",
+      "angle": "humor",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "My dryer has a sock-eating habit.",
+          "on_screen": "Dryer: 1, me: 0",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-03",
+      "angle": "hack",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "Click. That's the sound of never losing socks.",
+          "on_screen": "Click. Done.",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-04",
+      "angle": "confession",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "I had a whole basket of lonely socks.",
+          "on_screen": "My basket of shame",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-05",
+      "angle": "morning-rush",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "7:45 a.m. One sock. Zero matches.",
+          "on_screen": "One sock. Again.",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-06",
+      "angle": "hack",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "A tiny magnet ended my sock drama.",
+          "on_screen": "Sock drama: over",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-07",
+      "angle": "math",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "Five pairs for $29 changed my laundry.",
+          "on_screen": "5 pairs, $29",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-08",
+      "angle": "skeptic",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "I thought this sock thing was a gimmick.",
+          "on_screen": "I was so wrong",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-09",
+      "angle": "hack",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "Socks that click together at the cuff. Finally.",
+          "on_screen": "They click together",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-10",
+      "angle": "parent",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "Raising three kids means losing three hundred socks a year.",
+          "on_screen": "300 socks a year",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-11",
+      "angle": "relationship",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "Whose sock is this? Neither of ours.",
+          "on_screen": "Whose sock is this?",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-12",
+      "angle": "humor",
+      "round": 0,
+      "generator": "claude-baseline",
+      "changes": {
+        "hook": {
+          "vo": "I caught my washing machine stealing socks.",
+          "on_screen": "Caught in the act",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-02-r1",
+      "angle": "humor",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "Laundry day turned into a sock funeral.",
+          "on_screen": "RIP, left sock",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-04-r1",
+      "angle": "hack",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "How I stopped losing socks in the wash.",
+          "on_screen": "No more lonely socks",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-05-r1",
+      "angle": "math",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "I counted my single socks. Forty-one.",
+          "on_screen": "41 lonely socks",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-07-r1",
+      "angle": "humor",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "The dryer is keeping secrets from you.",
+          "on_screen": "What the dryer hides",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-08-r1",
+      "angle": "question",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "Nobody talks about the sock problem enough.",
+          "on_screen": "Let's talk about socks",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-09-r1",
+      "angle": "mystery",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "Two socks go in. One comes out.",
+          "on_screen": "Two in. One out.",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-11-r1",
+      "angle": "hack",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "This tiny laundry fix saved my mornings.",
+          "on_screen": "Tiny fix, calm mornings",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "AT-12-r1",
+      "angle": "question",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "Does your laundry basket look like this?",
+          "on_screen": "Single sock chaos",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-01-r1",
+      "angle": "hack",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "My sock basket is finally empty. Here's why.",
+          "on_screen": "Bye, sock basket",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-03-r1",
+      "angle": "hack",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "I quit matching socks after laundry.",
+          "on_screen": "Done matching socks",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-06-r1",
+      "angle": "hack",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "One tiny thing ended my sock drama.",
+          "on_screen": "Sock drama: over",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-07-r1",
+      "angle": "math",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "I replace a lost sock every single week.",
+          "on_screen": "52 socks a year",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-09-r1",
+      "angle": "hack",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "The laundry hack my mom needed years ago.",
+          "on_screen": "Where was this years ago?",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "CL-10-r1",
+      "angle": "parent",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "Three kids. Hundreds of lost socks a year.",
+          "on_screen": "300 socks a year",
+          "shot": "S02"
+        }
+      }
+    }
+  ]
+}

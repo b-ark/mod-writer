@@ -1,0 +1,10 @@
+# Rejected variants
+
+2 rejected.
+
+- HOOK_VO_LEN (hook VO longer than 8 words): 2
+
+| variant_id | replaces | body_id | generator | round | angle | hook_vo | hook_on_screen | hook_shot | other_changes | codes | reasons |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| B03-V15 |  | B03 | mod-writer | 0 | relationship | Whose sock is this? Nobody in this house knows. | Whose sock is this? | S02 |  | HOOK_VO_LEN | hook VO has 9 words (max 8, ~3 s): "Whose sock is this? Nobody in this house knows." |
+| B03-V19 |  | B03 | mod-writer | 0 | mystery | My socks go in pairs. They never come out. | In pairs. Out alone. | NEW: hands load a matched pair into the washer, then pull out a single sock |  | HOOK_VO_LEN | hook VO has 9 words (max 8, ~3 s): "My socks go in pairs. They never come out." |

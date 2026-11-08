@@ -1,0 +1,36 @@
+{
+  "total": 24,
+  "passed": 10,
+  "rejected": 14,
+  "superseded": 0,
+  "new_footage": 0,
+  "first_round_total": 24,
+  "first_round_passed": 10,
+  "by_generator": {
+    "atria": {
+      "total": 12,
+      "passed": 4
+    },
+    "claude-baseline": {
+      "total": 12,
+      "passed": 6
+    }
+  },
+  "by_round": {
+    "0": {
+      "total": 24,
+      "passed": 10
+    }
+  },
+  "violations": {
+    "SHOT": 4,
+    "REVEAL": 4,
+    "HOOK_VO_LEN": 2,
+    "BANNED": 1,
+    "ONSCREEN_LEN": 1,
+    "DUP_SET": 1,
+    "DUP_LIBRARY": 1,
+    "PRICE": 1
+  },
+  "warnings": []
+}

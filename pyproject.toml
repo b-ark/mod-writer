@@ -1,0 +1,16 @@
+[project]
+name = "mod-writer"
+version = "0.1.0"
+description = "Text variations for winning-creative modifications (SockLock) + a stdlib-only checker"
+readme = "README.md"
+requires-python = ">=3.15"
+dependencies = []  # check.py uses the standard library only
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

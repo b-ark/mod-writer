@@ -1,0 +1,322 @@
+{
+  "body_id": "SL_B05_skeptic",
+  "generator": "mod-writer",
+  "source": {
+    "segments": [
+      {
+        "segment": "hook",
+        "vo": "ok so I thought socks with magnets were the dumbest thing on the internet",
+        "on_screen": "",
+        "shot": "S01",
+        "shot_desc": "creator talking to camera, skeptical, no socks in frame (problem) (guess)"
+      },
+      {
+        "segment": "scene_1",
+        "vo": "like who needs that",
+        "on_screen": "",
+        "shot": "S01",
+        "shot_desc": "same talking-head shot, eye roll (problem) (guess)"
+      },
+      {
+        "segment": "scene_2",
+        "vo": "but I had 30 single socks in a bag in my closet I'm not kidding",
+        "on_screen": "",
+        "shot": "S02",
+        "shot_desc": "bag of single socks pulled out of the closet and dumped (problem) (guess)"
+      },
+      {
+        "segment": "scene_3",
+        "vo": "so I ordered them to prove a point",
+        "on_screen": "",
+        "shot": "S03",
+        "shot_desc": "SockLock package arriving / opened (product) (guess)"
+      },
+      {
+        "segment": "scene_4",
+        "vo": "you take them off and the cuffs just snap together",
+        "on_screen": "",
+        "shot": "S04",
+        "shot_desc": "close-up of the two cuffs joining (product, reveal) (guess)"
+      },
+      {
+        "segment": "scene_5",
+        "vo": "I've washed them like twenty times and they still come out as a pair",
+        "on_screen": "",
+        "shot": "S05",
+        "shot_desc": "joined pair pulled out of the washer/dryer (product, proof) (guess)"
+      },
+      {
+        "segment": "scene_6",
+        "vo": "my drawer actually looks like an adult lives here now",
+        "on_screen": "",
+        "shot": "S06",
+        "shot_desc": "tidy drawer of paired socks (product) (guess)"
+      },
+      {
+        "segment": "scene_7",
+        "vo": "and they ship you five more pairs every three months",
+        "on_screen": "",
+        "shot": "S07",
+        "shot_desc": "delivery box at the door (product) (guess)"
+      },
+      {
+        "segment": "cta",
+        "vo": "take the little quiz, it's five pairs for 29 bucks, you can cancel whenever",
+        "on_screen": "",
+        "shot": "S08",
+        "shot_desc": "end card with quiz button and offer (product) (guess)"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "variant_id": "SL_B05_skeptic-V01",
+      "angle": "skeptic",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Honestly? I expected these socks to flop.",
+          "on_screen": "I expected a flop",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V02",
+      "angle": "skeptic",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Socks on a subscription? Me? No way.",
+          "on_screen": "Sock subscription? Me?",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V03",
+      "angle": "confession",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Confession: I made fun of these socks.",
+          "on_screen": "Confession time",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V04",
+      "angle": "confession",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "I owe this sock company an apology.",
+          "on_screen": "I owe them an apology",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V05",
+      "angle": "relationship",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "My roommate kept sending me this sock ad.",
+          "on_screen": "My roommate's favorite ad",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V06",
+      "angle": "parent",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Mom of four. Upgraded socks? I laughed.",
+          "on_screen": "Mom of four. Skeptical.",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V07",
+      "angle": "humor",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Engineered socks? We've officially run out of ideas.",
+          "on_screen": "We're out of ideas",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V08",
+      "angle": "teen",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "My teenager begged for these socks. Ridiculous.",
+          "on_screen": "My teen wanted these?",
+          "shot": "S01"
+        }
+      },
+      "angle_note": "a parent mocks the socks their teenager asked for"
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V09",
+      "angle": "hack",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "A sock life hack? I'm a grown adult.",
+          "on_screen": "I'm a grown adult",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V10",
+      "angle": "math",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Socks come in twelve-packs. Why pay more?",
+          "on_screen": "Twelve-packs exist, right?",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V11",
+      "angle": "morning-rush",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Saw a sock ad while hunting for socks.",
+          "on_screen": "Looking for socks. Again.",
+          "shot": "NEW: rushed person digging through a sock drawer at 7:40 a.m., phone in one hand, one odd sock in the other"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V12",
+      "angle": "question",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Would you pay for socks that do something?",
+          "on_screen": "Would you pay?",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V13",
+      "angle": "hater-comment",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "I left a mean comment on this ad.",
+          "on_screen": "My mean comment:",
+          "shot": "S01"
+        }
+      },
+      "angle_note": "the speaker once left a mean comment on this very ad"
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V14",
+      "angle": "group-chat",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Screenshotted this ad for the group chat roast.",
+          "on_screen": "Group chat roast incoming",
+          "shot": "S01"
+        }
+      },
+      "angle_note": "the ad was sent to friends to be roasted"
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V15",
+      "angle": "hot-take",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Hot take: socks don't need an upgrade.",
+          "on_screen": "Hot take: socks are fine",
+          "shot": "S02"
+        }
+      },
+      "angle_note": "an unpopular-opinion opener that the body proves wrong"
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V16",
+      "angle": "minimalist",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "I'm a minimalist. Gadget socks? Absolutely not.",
+          "on_screen": "Minimalist. Absolutely not.",
+          "shot": "S01"
+        }
+      },
+      "angle_note": "a self-declared minimalist refuses gadget socks, then owns 30 single ones"
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V17",
+      "angle": "night-shift",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Twelve-hour night shifts. Zero patience for fancy socks.",
+          "on_screen": "Night shift. No patience.",
+          "shot": "NEW: nurse in scrubs at dawn after a night shift, holding up one odd sock by the dryer"
+        }
+      },
+      "angle_note": "a night-shift nurse with no patience for novelty socks"
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V18",
+      "angle": "news-report",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Breaking: local skeptic refuses to buy socks.",
+          "on_screen": "BREAKING: local skeptic",
+          "shot": "S01"
+        }
+      },
+      "angle_note": "fake breaking-news lower third about the skeptic herself"
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V19",
+      "angle": "mom-forwards",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "My mom sent me a sock ad. Again.",
+          "on_screen": "Mom sent it again",
+          "shot": "S01"
+        }
+      },
+      "angle_note": "mom keeps forwarding the sock ad to her adult kid"
+    },
+    {
+      "variant_id": "SL_B05_skeptic-V20",
+      "angle": "dare",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "My sister dared me to try these socks.",
+          "on_screen": "Dared to try these",
+          "shot": "S02"
+        }
+      },
+      "angle_note": "a sibling dares the skeptic to try the socks"
+    }
+  ]
+}

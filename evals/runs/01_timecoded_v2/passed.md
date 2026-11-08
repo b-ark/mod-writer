@@ -1,0 +1,24 @@
+# Passed variants
+
+18 of 20 variants passed (first round: 18 of 20).
+
+| variant_id | replaces | body_id | generator | round | angle | angle_note | hook_vo | hook_on_screen | hook_shot | vo_rerecord | new_footage |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| B03-V01 |  | B03 | mod-writer | 0 | morning-rush |  | Late three times this week. Same reason. | Late. Again. Same reason. | S01 |  |  |
+| B03-V02 |  | B03 | mod-writer | 0 | morning-rush |  | School bus is honking. I'm still sock hunting. | Bus honking. Still hunting. | S01 |  |  |
+| B03-V04 |  | B03 | mod-writer | 0 | math |  | I counted 23 socks. Not one pair. | 23 socks. No pairs. | S02 |  |  |
+| B03-V05 |  | B03 | mod-writer | 0 | math |  | I lose four minutes a day to socks. | 4 minutes. Every day. | S01 |  |  |
+| B03-V07 |  | B03 | mod-writer | 0 | gift |  | My sister heard me yelling about socks. | Sister heard the yelling | S01 |  |  |
+| B03-V08 |  | B03 | mod-writer | 0 | confession |  | I haven't worn matching socks since May. | No matching pair since May | S01 |  |  |
+| B03-V09 |  | B03 | mod-writer | 0 | humor |  | Hallway hopping is my morning cardio now. | My morning cardio | S01 |  |  |
+| B03-V10 |  | B03 | mod-writer | 0 | hack |  | One small thing fixed my 7:45 chaos. | Fixed my 7:45 chaos | S01 |  |  |
+| B03-V11 |  | B03 | mod-writer | 0 | question |  | Are your socks matching right now? Check. | Check your socks. Now. | S01 |  |  |
+| B03-V12 |  | B03 | mod-writer | 0 | news-report | fake breaking-news report about a tiny household crisis | Breaking: local parent late again. One sock. | BREAKING: one sock | S01 |  |  |
+| B03-V13 |  | B03 | mod-writer | 0 | list | a quick list of what I lose every morning, sock last | Things I lose by 7:45: keys, patience, socks. | Keys. Patience. One sock. | S01 |  |  |
+| B03-V14 |  | B03 | mod-writer | 0 | diary | a diary-style day counter of the same sock problem | Day 214 of school drop-off in one sock. | Day 214. One sock. | S01 |  |  |
+| B03-V15 |  | B03 | mod-writer | 0 | review | a deadpan product-style review of my own sock basket | Rating my sock basket: one star. | Sock basket: one star | S02 |  |  |
+| B03-V16 |  | B03 | mod-writer | 0 | trip | packing for a trip and nothing on the bed makes a pair | Packing for vacation: twelve socks, zero pairs. | 12 socks. 0 pairs. | S02 |  |  |
+| B03-V17 |  | B03 | mod-writer | 0 | letter | an open letter to the missing sock, mild nostalgia | Dear other sock: I'm not mad. Come home. | Dear other sock, | S01 |  |  |
+| B03-V18 |  | B03 | mod-writer | 0 | dare | dare the viewer to find one pair in my pile | I dare you to find a pair here. | Find a pair. Dare you. | S02 |  |  |
+| B03-V19 |  | B03 | mod-writer | 0 | first-date | a big day (first date) and not one matching sock | First date today and not one matching sock. | First date. No pair. | S02 |  |  |
+| B03-V20 |  | B03 | mod-writer | 0 | dog | the dog is the sock thief, and only ever takes one | My dog only steals one sock. Always one. | He only takes one | NEW: dog trotting off down the hallway with a single sock in its mouth |  | New footage needed - hook: dog trotting off down the hallway with a single sock in its mouth |

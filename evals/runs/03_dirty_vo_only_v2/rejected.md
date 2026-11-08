@@ -1,0 +1,10 @@
+# Rejected variants
+
+2 rejected.
+
+- FLOW (hook does not lead into the rest of the script (flow review)): 2
+
+| variant_id | replaces | body_id | generator | round | angle | angle_note | hook_vo | hook_on_screen | hook_shot | other_changes | codes | reasons |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| SL_B05_skeptic-V04 |  | SL_B05_skeptic | mod-writer | 0 | confession |  | I owe this sock company an apology. | I owe them an apology | S01 |  | FLOW | rule 1 dangling join: hook 'I owe this sock company an apology.' names a company, not a product, so scene_1 'like who needs that' (needs a company?) and scene_3 'so I ordered them' have no fitting referent |
+| SL_B05_skeptic-V08 |  | SL_B05_skeptic | mod-writer | 0 | teen | a parent mocks the socks their teenager asked for | My teenager begged for these socks. Ridiculous. | My teen wanted these? | S01 |  | FLOW | rule 2 broken promise / rule 3 contradiction: hook 'My teenager begged for these socks' sets up a teen story the body never returns to; body is the narrator's own problem ('I had 30 single socks', 'my drawer actually looks like an adult lives here now') and 'so I ordered them to prove a point' does not fit buying what the teen begged for |

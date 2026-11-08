@@ -1,0 +1,54 @@
+{
+  "total": 20,
+  "passed": 20,
+  "rejected": 0,
+  "superseded": 0,
+  "new_footage": 2,
+  "first_round_total": 20,
+  "first_round_passed": 20,
+  "by_generator": {
+    "mod-writer": {
+      "total": 20,
+      "passed": 20
+    }
+  },
+  "by_round": {
+    "0": {
+      "total": 20,
+      "passed": 20
+    }
+  },
+  "violations": {},
+  "flow": {
+    "file": "",
+    "ok": 0,
+    "break": 0,
+    "unreviewed": [
+      "SL_B05_skeptic-V01",
+      "SL_B05_skeptic-V02",
+      "SL_B05_skeptic-V03",
+      "SL_B05_skeptic-V04",
+      "SL_B05_skeptic-V05",
+      "SL_B05_skeptic-V06",
+      "SL_B05_skeptic-V07",
+      "SL_B05_skeptic-V08",
+      "SL_B05_skeptic-V09",
+      "SL_B05_skeptic-V10",
+      "SL_B05_skeptic-V11",
+      "SL_B05_skeptic-V12",
+      "SL_B05_skeptic-V13",
+      "SL_B05_skeptic-V14",
+      "SL_B05_skeptic-V15",
+      "SL_B05_skeptic-V16",
+      "SL_B05_skeptic-V17",
+      "SL_B05_skeptic-V18",
+      "SL_B05_skeptic-V19",
+      "SL_B05_skeptic-V20"
+    ]
+  },
+  "warnings": [
+    "source script SL_B05_skeptic: REVEAL - hook vo: 'magnets' reveals the product before the body does",
+    "source script SL_B05_skeptic: HOOK_VO_LEN - hook VO has 14 words (max 8, ~3 s): \"ok so I thought socks with magnets were the dumbest thing on the internet\"",
+    "hook-to-script flow not reviewed for 20 variants (no flow.json): SL_B05_skeptic-V01, SL_B05_skeptic-V02, SL_B05_skeptic-V03, SL_B05_skeptic-V04, SL_B05_skeptic-V05, SL_B05_skeptic-V06, SL_B05_skeptic-V07, SL_B05_skeptic-V08, SL_B05_skeptic-V09, SL_B05_skeptic-V10 and 10 more - see flow_review.md"
+  ]
+}

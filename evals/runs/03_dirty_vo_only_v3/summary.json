@@ -1,0 +1,42 @@
+{
+  "total": 22,
+  "passed": 20,
+  "rejected": 2,
+  "superseded": 0,
+  "new_footage": 2,
+  "first_round_total": 20,
+  "first_round_passed": 19,
+  "by_generator": {
+    "mod-writer": {
+      "total": 22,
+      "passed": 20
+    }
+  },
+  "by_round": {
+    "0": {
+      "total": 20,
+      "passed": 19
+    },
+    "1": {
+      "total": 1,
+      "passed": 0
+    },
+    "2": {
+      "total": 1,
+      "passed": 1
+    }
+  },
+  "violations": {
+    "FLOW": 2
+  },
+  "flow": {
+    "file": "evals\\runs\\03_dirty_vo_only_v3\\flow.json",
+    "ok": 20,
+    "break": 2,
+    "unreviewed": []
+  },
+  "warnings": [
+    "source script SL_B05_skeptic: REVEAL - hook vo: 'magnets' reveals the product before the body does",
+    "source script SL_B05_skeptic: HOOK_VO_LEN - hook VO has 14 words (max 8, ~3 s): \"ok so I thought socks with magnets were the dumbest thing on the internet\""
+  ]
+}

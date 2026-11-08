@@ -1,0 +1,12 @@
+{
+  "body_id": "B01",
+  "title": "Lost sock mystery (winner_script.txt, parsed)",
+  "segments": [
+    {"segment": "hook", "vo": "Where do all the missing socks actually go?", "on_screen": "Where do socks go?", "shot": "S01", "shot_desc": "close-up: one sock alone on the bed (problem)"},
+    {"segment": "scene_1", "vo": "Every laundry day, one more sock vanishes without a trace.", "on_screen": "One more gone", "shot": "S02", "shot_desc": "laundry basket full of odd socks (problem)"},
+    {"segment": "scene_2", "vo": "So I tried socks that snap together with a tiny magnet.", "on_screen": "They snap together", "shot": "S03", "shot_desc": "two socks snap together, magnet visible (product)"},
+    {"segment": "scene_3", "vo": "They go in as a pair and come out as a pair.", "on_screen": "In pairs. Out pairs.", "shot": "S04", "shot_desc": "pair goes into the washer and comes out joined (product)"},
+    {"segment": "scene_4", "vo": "Five new pairs land at my door every quarter.", "on_screen": "5 pairs every quarter", "shot": "S05", "shot_desc": "subscription box at the door (product)"},
+    {"segment": "cta", "vo": "Take the quick quiz and get five pairs for $29.", "on_screen": "5 pairs for $29", "shot": "S06", "shot_desc": "end card: 5 pairs for $29, quiz button (product)"}
+  ]
+}

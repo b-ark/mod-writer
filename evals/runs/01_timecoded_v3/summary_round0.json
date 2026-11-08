@@ -1,0 +1,52 @@
+{
+  "total": 20,
+  "passed": 20,
+  "rejected": 0,
+  "superseded": 0,
+  "new_footage": 1,
+  "first_round_total": 20,
+  "first_round_passed": 20,
+  "by_generator": {
+    "mod-writer": {
+      "total": 20,
+      "passed": 20
+    }
+  },
+  "by_round": {
+    "0": {
+      "total": 20,
+      "passed": 20
+    }
+  },
+  "violations": {},
+  "flow": {
+    "file": "",
+    "ok": 0,
+    "break": 0,
+    "unreviewed": [
+      "B03-V01",
+      "B03-V02",
+      "B03-V03",
+      "B03-V04",
+      "B03-V05",
+      "B03-V06",
+      "B03-V07",
+      "B03-V08",
+      "B03-V09",
+      "B03-V10",
+      "B03-V11",
+      "B03-V12",
+      "B03-V13",
+      "B03-V14",
+      "B03-V15",
+      "B03-V16",
+      "B03-V17",
+      "B03-V18",
+      "B03-V19",
+      "B03-V20"
+    ]
+  },
+  "warnings": [
+    "hook-to-script flow not reviewed for 20 variants (no flow.json): B03-V01, B03-V02, B03-V03, B03-V04, B03-V05, B03-V06, B03-V07, B03-V08, B03-V09, B03-V10 and 10 more - see flow_review.md"
+  ]
+}

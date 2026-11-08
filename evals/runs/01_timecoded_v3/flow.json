@@ -1,0 +1,22 @@
+{"reviewer": "flow-review", "verdicts": [
+  {"variant_id": "B03-V01", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V02", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V03", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V04", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V05", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V06", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V07", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V08", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V09", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V10", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V11", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V12", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V13", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V14", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V15", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V16", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V17", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V18", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V19", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V20", "verdict": "ok", "reason": ""}
+]}

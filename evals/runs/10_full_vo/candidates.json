@@ -1,0 +1,133 @@
+{
+  "body_id": "B03",
+  "generator": "mod-writer",
+  "source": {"segments": [
+    {"segment": "hook", "vo": "It's 7:45 and I have exactly one sock.", "on_screen": "7:45. One sock.", "shot": "S01", "shot_desc": "me hopping around the hallway in one sock, kid yelling in the background (problem)"},
+    {"segment": "scene_1", "vo": "Every morning I dig through a basket of strangers.", "on_screen": "The basket of strangers", "shot": "S02", "shot_desc": "pile of odd socks on the bed (problem)"},
+    {"segment": "scene_2", "vo": "Then my sister sent me socks that snap together.", "on_screen": "Wait, they snap?", "shot": "S03", "shot_desc": "close-up of the cuffs snapping together (product)"},
+    {"segment": "scene_3", "vo": "Off the feet, snap, into the wash, still a pair.", "on_screen": "Still a pair", "shot": "S04", "shot_desc": "joined pair in the washer, comes out connected (product)"},
+    {"segment": "cta", "vo": "Take the quiz, five pairs for $29, cancel anytime.", "on_screen": "5 pairs - $29", "shot": "S05", "shot_desc": "end card with the quiz on a phone (product)"}
+  ]},
+  "variants": [
+    {"variant_id": "B03-V01", "angle": "morning-rush", "round": 0, "changes": {
+      "hook": {"vo": "7:52 and I'm hopping on one sock.", "on_screen": "7:52. Still hopping.", "shot": "S01"},
+      "scene_1": {"vo": "So I dig through the basket of strangers.", "on_screen": "Digging for a match"},
+      "scene_2": {"vo": "Then my sister sent socks that snap together.", "on_screen": "Hold on, they snap?"},
+      "scene_3": {"vo": "Off, snap, wash, and still a pair.", "on_screen": "Washed. Still paired."},
+      "cta": {"vo": "Take the quiz: five pairs, $29, cancel anytime.", "on_screen": "Quiz → 5 pairs, $29"}}},
+    {"variant_id": "B03-V02", "angle": "morning-rush", "round": 0, "changes": {
+      "hook": {"vo": "Bus in two minutes. I have one sock.", "on_screen": "One sock. Two minutes.", "shot": "S01"},
+      "scene_1": {"vo": "My basket of strangers never has the twin.", "on_screen": "No twin in sight"},
+      "scene_2": {"vo": "Then my sister gifted me snap-together socks.", "on_screen": "They snap together"},
+      "scene_3": {"vo": "Feet off, snap, wash, and still a pair.", "on_screen": "Out still paired"},
+      "cta": {"vo": "Take the quiz. Five pairs for $29. Cancel anytime.", "on_screen": "5 pairs for $29"}}},
+    {"variant_id": "B03-V03", "angle": "morning-rush", "round": 0, "changes": {
+      "hook": {"vo": "Every morning starts with a sock hunt.", "on_screen": "Daily sock hunt", "shot": "S02"},
+      "scene_1": {"vo": "I dig through a basket of total strangers.", "on_screen": "Zero matches in here"},
+      "scene_2": {"vo": "Then my sister sent socks that pair themselves.", "on_screen": "Wait, they pair up?"},
+      "scene_3": {"vo": "Off, snap, into the wash, out as a pair.", "on_screen": "Comes out a pair"},
+      "cta": {"vo": "Take the quiz. Five pairs, $29, cancel anytime.", "on_screen": "Quiz: 5 pairs, $29"}}},
+    {"variant_id": "B03-V04", "angle": "confession", "round": 0, "changes": {
+      "hook": {"vo": "I haven't worn a matching pair since March.", "on_screen": "Not since March", "shot": "S02"},
+      "scene_1": {"vo": "Every morning I settle for two strangers.", "on_screen": "Close enough, right?"},
+      "scene_2": {"vo": "Then my sister sent socks that snap into pairs.", "on_screen": "Pairs that snap"},
+      "scene_3": {"vo": "Off, snap, wash, dry, still a pair.", "on_screen": "Matching. Finally."},
+      "cta": {"vo": "Take the quiz and get five pairs for $29.", "on_screen": "Your 5 pairs: $29"}}},
+    {"variant_id": "B03-V05", "angle": "confession", "round": 0, "changes": {
+      "hook": {"vo": "I've been late twice this week over socks.", "on_screen": "Late. Because socks.", "shot": "S01"},
+      "scene_1": {"vo": "Every morning it's me versus the sock basket.", "on_screen": "Me vs. the basket"},
+      "scene_2": {"vo": "Then my sister sent me socks that hold hands.", "on_screen": "Socks that hold hands"},
+      "scene_3": {"vo": "Off, snap, wash, and they're still holding on.", "on_screen": "Still holding hands"},
+      "cta": {"vo": "Take the quiz, grab five pairs for $29.", "on_screen": "Quiz → 5 pairs, $29"}}},
+    {"variant_id": "B03-V06", "angle": "confession", "round": 0, "changes": {
+      "hook": {"vo": "I kept buying socks. They kept disappearing.", "on_screen": "Buy. Lose. Repeat.", "shot": "S02"},
+      "scene_1": {"vo": "So my bed looked like a sock lost-and-found.", "on_screen": "Sock lost and found"},
+      "scene_2": {"vo": "Then my sister sent socks that snap together.", "on_screen": "These ones snap?"},
+      "scene_3": {"vo": "Off, snap, in the wash, still together.", "on_screen": "Washed and still together"},
+      "cta": {"vo": "Five pairs for $29. Take the quiz, cancel anytime.", "on_screen": "5 pairs. $29. Quiz."}}},
+    {"variant_id": "B03-V07", "angle": "humor", "round": 0, "changes": {
+      "hook": {"vo": "My socks have been filing for divorce.", "on_screen": "Sock divorce season", "shot": "S02"},
+      "scene_1": {"vo": "Every morning I sort out the custody battle.", "on_screen": "Who gets the left?"},
+      "scene_2": {"vo": "Then my sister sent socks that stay married.", "on_screen": "Snapped back together"},
+      "scene_3": {"vo": "Off, snap, wash, and still happily married.", "on_screen": "Happily married, post-wash"},
+      "cta": {"vo": "Take the quiz. Five pairs, $29. Cancel anytime.", "on_screen": "Quiz: 5 pairs, $29"}}},
+    {"variant_id": "B03-V08", "angle": "humor", "round": 0, "changes": {
+      "hook": {"vo": "My dryer runs a secret sock smuggling ring.", "on_screen": "Dryer: sock smuggler", "shot": "NEW: slow push into an open dryer drum with one lonely sock inside"},
+      "scene_1": {"vo": "Every morning I dig through what's left.", "on_screen": "What the dryer left"},
+      "scene_2": {"vo": "Then my sister sent socks the dryer can't split.", "on_screen": "Smuggler-proof socks?"},
+      "scene_3": {"vo": "Off, snap, wash, dry, and still a pair.", "on_screen": "Dryer: 0. Me: 1."},
+      "cta": {"vo": "Take the quiz. Five pairs, $29. Cancel anytime.", "on_screen": "Quiz → 5 pairs, $29"}}},
+    {"variant_id": "B03-V09", "angle": "humor", "round": 0, "changes": {
+      "hook": {"vo": "My hallway hopping is now a cardio routine.", "on_screen": "One-sock cardio", "shot": "S01"},
+      "scene_1": {"vo": "Every morning I dig for a sock that fits.", "on_screen": "Basket dive, round two"},
+      "scene_2": {"vo": "Then my sister ended my workout with snap socks.", "on_screen": "Workout over: they snap"},
+      "scene_3": {"vo": "Off, snap, wash, still a pair. No hopping.", "on_screen": "Zero hopping required"},
+      "cta": {"vo": "Take the quiz. Five pairs for $29. Cancel anytime.", "on_screen": "Quiz → 5 pairs, $29"}}},
+    {"variant_id": "B03-V10", "angle": "question", "round": 0, "changes": {
+      "hook": {"vo": "How many single socks are on your bed?", "on_screen": "Count yours", "shot": "S02"},
+      "scene_1": {"vo": "Mine? A whole basket of strangers.", "on_screen": "Mine: a full basket"},
+      "scene_2": {"vo": "Then my sister sent me socks that snap.", "on_screen": "Hold up, they snap?"},
+      "scene_3": {"vo": "Off, snap, into the wash, out as a pair.", "on_screen": "Out as a pair"},
+      "cta": {"vo": "Take the quiz: five pairs for $29.", "on_screen": "Quiz → 5 pairs, $29"}}},
+    {"variant_id": "B03-V11", "angle": "question", "round": 0, "changes": {
+      "hook": {"vo": "Ever hopped to work in one sock?", "on_screen": "Just me?", "shot": "S01"},
+      "scene_1": {"vo": "Every morning I dig the basket for its twin.", "on_screen": "Searching for the twin"},
+      "scene_2": {"vo": "Then my sister sent socks that snap as twins.", "on_screen": "Twins that snap"},
+      "scene_3": {"vo": "Off, snap, wash, and the twins stay twins.", "on_screen": "Twins after the wash"},
+      "cta": {"vo": "Take the quiz. Five pairs, $29, cancel anytime.", "on_screen": "5 twin pairs - $29"}}},
+    {"variant_id": "B03-V12", "angle": "question", "round": 0, "changes": {
+      "hook": {"vo": "Is your sock basket this bad too?", "on_screen": "Yours this bad?", "shot": "S02"},
+      "scene_1": {"vo": "Mine greets me every morning with strangers.", "on_screen": "Good morning, strangers"},
+      "scene_2": {"vo": "Then my sister sent socks that snap in pairs.", "on_screen": "Pairs that snap shut"},
+      "scene_3": {"vo": "Off, snap, wash, and out comes a pair.", "on_screen": "Basket: retired"},
+      "cta": {"vo": "Take the quiz. Five pairs for $29.", "on_screen": "Quiz: 5 pairs, $29"}}},
+    {"variant_id": "B03-V13", "angle": "math", "round": 0, "changes": {
+      "hook": {"vo": "I counted 23 single socks on my bed.", "on_screen": "23 singles. One bed.", "shot": "S02"},
+      "scene_1": {"vo": "Every morning I dig through all 23.", "on_screen": "None of them match"},
+      "scene_2": {"vo": "Then my sister sent socks that snap as one.", "on_screen": "Count: back to pairs"},
+      "scene_3": {"vo": "Off, snap, wash. Count after: zero lost.", "on_screen": "Lost socks: 0"},
+      "cta": {"vo": "Take the quiz. Five pairs for $29, cancel anytime.", "on_screen": "5 pairs for $29"}}},
+    {"variant_id": "B03-V14", "angle": "math", "round": 0, "changes": {
+      "hook": {"vo": "I've bought socks six times this year.", "on_screen": "Sixth pack this year", "shot": "S02"},
+      "scene_1": {"vo": "And still I dig through a basket of strangers.", "on_screen": "Still no matches"},
+      "scene_2": {"vo": "Then my sister sent socks that snap together.", "on_screen": "These ones snap"},
+      "scene_3": {"vo": "Off, snap, wash, and both still show up.", "on_screen": "Both still show up"},
+      "cta": {"vo": "Take the quiz: five pairs, $29, cancel anytime.", "on_screen": "5 pairs - $29, quiz"}}},
+    {"variant_id": "B03-V15", "angle": "skeptic", "round": 0, "changes": {
+      "hook": {"vo": "I didn't think socks could fix my mornings.", "on_screen": "Socks? Fix mornings?", "shot": "S02"},
+      "scene_1": {"vo": "Every morning I dug through a basket of strangers.", "on_screen": "The daily sock dig"},
+      "scene_2": {"vo": "Then my sister sent socks that snap. I scoffed.", "on_screen": "Snap together? Sure."},
+      "scene_3": {"vo": "Off, snap, wash... and yep, still a pair.", "on_screen": "Okay, I was wrong"},
+      "cta": {"vo": "Try the quiz. Five pairs, $29, cancel anytime.", "on_screen": "Quiz → 5 pairs, $29"}}},
+    {"variant_id": "B03-V16", "angle": "skeptic", "round": 0, "changes": {
+      "hook": {"vo": "I thought matching socks was a myth.", "on_screen": "A total myth", "shot": "S01"},
+      "scene_1": {"vo": "Every morning, the basket proved me right.", "on_screen": "Exhibit A: the basket"},
+      "scene_2": {"vo": "Then my sister sent snap-together socks.", "on_screen": "Myth busted?"},
+      "scene_3": {"vo": "Off, snap, wash, still a pair. Not a myth.", "on_screen": "Real. Still paired."},
+      "cta": {"vo": "Take the quiz. Five pairs for $29.", "on_screen": "Take the quiz"}}},
+    {"variant_id": "B03-V17", "angle": "parent", "round": 0, "changes": {
+      "hook": {"vo": "Three kids, one hallway, zero matching socks.", "on_screen": "Every school morning", "shot": "S01"},
+      "scene_1": {"vo": "Every morning we raid the basket of strangers.", "on_screen": "Family basket raid"},
+      "scene_2": {"vo": "Then my sister sent us socks that snap together.", "on_screen": "Kid-proof? They snap!"},
+      "scene_3": {"vo": "Off, snap, wash all of them, still pairs.", "on_screen": "Every load: still pairs"},
+      "cta": {"vo": "Take the quiz. Five pairs for $29, cancel anytime.", "on_screen": "Quiz: 5 pairs, $29"}}},
+    {"variant_id": "B03-V18", "angle": "parent", "round": 0, "changes": {
+      "hook": {"vo": "Five loads a week and not one pair.", "on_screen": "5 loads. 0 pairs.", "shot": "S02"},
+      "scene_1": {"vo": "Every load leaves more strangers on my bed.", "on_screen": "More strangers every load"},
+      "scene_2": {"vo": "Then my sister sent socks that snap in pairs.", "on_screen": "Wait, these snap?"},
+      "scene_3": {"vo": "Off, snap, into the wash, and out as pairs.", "on_screen": "Load six: all pairs"},
+      "cta": {"vo": "Take the quiz. Five pairs for $29. Cancel anytime.", "on_screen": "5 pairs for $29"}}},
+    {"variant_id": "B03-V19", "angle": "mystery", "round": 0, "changes": {
+      "hook": {"vo": "Where do my socks go after every wash?", "on_screen": "Gone. Every wash.", "shot": "S02"},
+      "scene_1": {"vo": "So every morning I dig through the survivors.", "on_screen": "The survivors"},
+      "scene_2": {"vo": "Then my sister sent socks that snap, no escape.", "on_screen": "No escape: they snap"},
+      "scene_3": {"vo": "Off, snap, wash, and both of them come back.", "on_screen": "Both came back"},
+      "cta": {"vo": "Take the quiz. Get five pairs for $29.", "on_screen": "Quiz → 5 pairs, $29"}}},
+    {"variant_id": "B03-V20", "angle": "mystery", "round": 0, "changes": {
+      "hook": {"vo": "Something in my laundry room eats socks.", "on_screen": "Something eats socks", "shot": "NEW: dark laundry room, washer door slowly opens on one lone sock"},
+      "scene_1": {"vo": "Every morning I dig through its leftovers.", "on_screen": "Its leftovers"},
+      "scene_2": {"vo": "Then my sister sent socks it can't separate.", "on_screen": "Try splitting these"},
+      "scene_3": {"vo": "Off, snap, wash, and it gave both back.", "on_screen": "It gave both back"},
+      "cta": {"vo": "Take the quiz: five pairs, $29, cancel anytime.", "on_screen": "5 pairs, $29. Quiz."}}}
+  ]
+}

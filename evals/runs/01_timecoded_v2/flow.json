@@ -1,0 +1,22 @@
+{"reviewer": "flow-review", "verdicts": [
+  {"variant_id": "B03-V01", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V02", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V03", "verdict": "break", "reason": "rule 2 broken promise: hook 'My son wore my socks to school' / 'He took my socks' sets up the son taking my socks, but the body never mentions the son again and its problem is a 'basket of strangers' (mismatched singles), not missing socks"},
+  {"variant_id": "B03-V04", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V05", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V06", "verdict": "break", "reason": "rule 2 broken promise: hook 'My husband says he never loses socks' / 'He \"never\" loses socks' sets up a husband-vs-me story, and the husband never comes back; the body is only about 'I dig through a basket of strangers'"},
+  {"variant_id": "B03-V07", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V08", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V09", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V10", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V11", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V12", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V13", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V14", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V15", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V16", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V17", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V18", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V19", "verdict": "ok", "reason": ""},
+  {"variant_id": "B03-V20", "verdict": "ok", "reason": ""}
+]}

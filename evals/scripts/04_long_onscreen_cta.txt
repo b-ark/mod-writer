@@ -1,0 +1,11 @@
+REQUEST: B06. Change the hook AND give me new on-screen text for every scene and a new CTA text, the current titles look tired. Keep the VO of the body.
+---
+B06 "Dryer conspiracy" 30s
+
+[0-3] HOOK. VO: "I have proof my dryer steals socks." TEXT: "The dryer is guilty" | visual: zoom into the dryer drum, socks tumbling
+[3-8] VO: "Forty-one single socks. That's my evidence." TEXT: "Exhibit A: 41 socks" | visual: pile of odd socks on bed
+[8-13] VO: "I even checked behind the machine. Nothing." TEXT: "Nothing back there" | visual: phone flashlight behind the washer
+[13-18] VO: "So I switched to socks with a tiny magnet in the cuff." TEXT: "Case closed" | visual: macro of two cuffs snapping
+[18-23] VO: "The dryer can't split them up anymore." TEXT: "Can't split them" | visual: pair tumbles through the wash, still joined
+[23-27] VO: "And my drawer finally makes sense." TEXT: "Drawer: solved" | visual: neat drawer of pairs
+[27-30] CTA. VO: "Take the quiz. Five pairs, twenty-nine dollars." TEXT: "Quiz → 5 pairs $29" | visual: end card

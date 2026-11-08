@@ -1,0 +1,28 @@
+REQUEST: New hooks for this winner, please. Body ID B03.
+---
+SockLock B03 "Morning rush" - 24s, 9:16
+
+0:00-0:03 HOOK
+VO: It's 7:45 and I have exactly one sock.
+TEXT: 7:45. One sock.
+SHOT: me hopping around the hallway in one sock, kid yelling in the background
+
+0:03-0:08
+VO: Every morning I dig through a basket of strangers.
+TEXT: The basket of strangers
+SHOT: pile of odd socks on the bed
+
+0:08-0:13
+VO: Then my sister sent me socks that snap together.
+TEXT: Wait, they snap?
+SHOT: close-up of the cuffs snapping together
+
+0:13-0:19
+VO: Off the feet, snap, into the wash, still a pair.
+TEXT: Still a pair
+SHOT: joined pair in the washer, comes out connected
+
+0:19-0:24 CTA
+VO: Take the quiz, five pairs for $29, cancel anytime.
+TEXT: 5 pairs - $29
+SHOT: end card with the quiz on a phone

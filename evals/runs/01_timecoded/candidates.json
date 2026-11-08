@@ -1,0 +1,318 @@
+{
+  "body_id": "B03",
+  "generator": "mod-writer",
+  "source": {
+    "segments": [
+      {
+        "segment": "hook",
+        "vo": "It's 7:45 and I have exactly one sock.",
+        "on_screen": "7:45. One sock.",
+        "shot": "S01"
+      },
+      {
+        "segment": "scene_1",
+        "vo": "Every morning I dig through a basket of strangers.",
+        "on_screen": "The basket of strangers",
+        "shot": "S02"
+      },
+      {
+        "segment": "scene_2",
+        "vo": "Then my sister sent me socks that snap together.",
+        "on_screen": "Wait, they snap?",
+        "shot": "S03"
+      },
+      {
+        "segment": "scene_3",
+        "vo": "Off the feet, snap, into the wash, still a pair.",
+        "on_screen": "Still a pair",
+        "shot": "S04"
+      },
+      {
+        "segment": "cta",
+        "vo": "Take the quiz, five pairs for $29, cancel anytime.",
+        "on_screen": "5 pairs - $29",
+        "shot": "S05"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "variant_id": "B03-V01",
+      "angle": "morning-rush",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Late again, and one sock is missing.",
+          "on_screen": "Late. One sock.",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V02",
+      "angle": "morning-rush",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "School run in ten minutes. One sock.",
+          "on_screen": "10 minutes. One sock.",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V03",
+      "angle": "morning-rush",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "My alarm went off. My sock didn't show.",
+          "on_screen": "Alarm: on. Sock: gone.",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V04",
+      "angle": "confession",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Confession: I own zero matching socks.",
+          "on_screen": "Zero matching socks",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V05",
+      "angle": "confession",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "I haven't worn a matching pair in months.",
+          "on_screen": "Months. No matching pair.",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V06",
+      "angle": "parent",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Three kids, one hallway, zero matching socks.",
+          "on_screen": "Three kids. Zero pairs.",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V07",
+      "angle": "parent",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Mom life means I'm the house sock detective.",
+          "on_screen": "Household sock detective",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V08",
+      "angle": "math",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "I've bought new socks six times this year.",
+          "on_screen": "Six packs. Still one.",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V09",
+      "angle": "math",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Twelve socks went in. Seven came out.",
+          "on_screen": "12 in. 7 out.",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V10",
+      "angle": "hack",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "The tiny fix for my worst morning habit.",
+          "on_screen": "My worst morning habit",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V11",
+      "angle": "hack",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Nobody told me socks could stop disappearing.",
+          "on_screen": "Wish I knew sooner",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V12",
+      "angle": "humor",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "My hallway hosts a daily one-sock dance.",
+          "on_screen": "The one-sock dance",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V13",
+      "angle": "humor",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "I set up a camera inside my dryer.",
+          "on_screen": "Dryer cam: day 3",
+          "shot": "NEW: phone-camera POV from inside a dark dryer drum, one lonely sock tumbling"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V14",
+      "angle": "relationship",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "My husband swears these aren't his socks.",
+          "on_screen": "Not his socks?",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V15",
+      "angle": "relationship",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Whose sock is this? Nobody in this house knows.",
+          "on_screen": "Whose sock is this?",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V16",
+      "angle": "skeptic",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "I didn't think socks could fix my mornings.",
+          "on_screen": "Socks fixed my mornings?",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V17",
+      "angle": "question",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "How many single socks are in your basket?",
+          "on_screen": "Count your single socks",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V18",
+      "angle": "question",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Do your socks vanish right before work too?",
+          "on_screen": "Vanish before work?",
+          "shot": "S01"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V19",
+      "angle": "mystery",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "My socks go in pairs. They never come out.",
+          "on_screen": "In pairs. Out alone.",
+          "shot": "NEW: hands load a matched pair into the washer, then pull out a single sock"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V20",
+      "angle": "mystery",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "Half my socks have quietly moved out.",
+          "on_screen": "Half moved out",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V21",
+      "angle": "gift",
+      "round": 0,
+      "changes": {
+        "hook": {
+          "vo": "The best gift my sister ever gave me.",
+          "on_screen": "Best gift ever?",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V15-r1",
+      "angle": "relationship",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "Whose sock is this? Nobody here knows.",
+          "on_screen": "Whose sock is this?",
+          "shot": "S02"
+        }
+      }
+    },
+    {
+      "variant_id": "B03-V19-r1",
+      "angle": "mystery",
+      "round": 1,
+      "generator": "mod-writer",
+      "changes": {
+        "hook": {
+          "vo": "Socks go in as pairs. Never come out.",
+          "on_screen": "In pairs. Out alone.",
+          "shot": "NEW: hands load a matched pair into the washer, then pull out a single sock"
+        }
+      }
+    }
+  ]
+}

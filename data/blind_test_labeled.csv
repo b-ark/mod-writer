@@ -1,0 +1,25 @@
+﻿variant_id,body_id,generator,segment,vo,on_screen,shot,angle,accepted,manual_violation
+AT-01,B01,atria,hook,Where did my other sock go this time?,Gone. Again.,S01,mystery,1,
+AT-02,B01,atria,hook,Laundry day turned into a sock funeral.,"RIP, left sock",S12,humor,0,SHOT
+AT-03,B01,atria,hook,Every mom knows this laundry basket.,The basket of shame,S02,parent,1,
+AT-04,B01,atria,hook,Stop losing socks in the wash forever.,No more lonely socks,S01,hack,0,BANNED
+AT-05,B01,atria,hook,I counted my single socks. Forty-one.,41 lonely socks,S15,math,0,SHOT
+AT-06,B01,atria,hook,POV: you're late and find one sock.,"POV: late, one sock",S01,morning-rush,1,
+AT-07,B01,atria,hook,The dryer is keeping secrets from you.,What the dryer hides,S14,humor,0,SHOT
+AT-08,B01,atria,hook,Nobody talks about the sock problem enough.,We need to talk about socks,S02,question,0,ONSCREEN_LEN
+AT-09,B01,atria,hook,Where did my other sock go this time,Gone again,S01,mystery,0,DUP_SET
+AT-10,B01,atria,hook,My husband swears the washer eats socks.,The washer did it,S02,relationship,0,
+AT-11,B01,atria,hook,This tiny laundry fix saved my mornings.,"Tiny fix, calm mornings",S13,hack,0,SHOT
+AT-12,B01,atria,hook,Your sock drawer doesn't have to look like this.,Sock drawer chaos,S02,question,0,HOOK_VO_LEN
+CL-01,B01,claude-baseline,hook,These magnetic socks never lose their partner.,Socks that stay paired,S03,hack,0,REVEAL;HOOK_SHOT
+CL-02,B01,claude-baseline,hook,My dryer has a sock-eating habit.,"Dryer: 1, me: 0",S01,humor,1,
+CL-03,B01,claude-baseline,hook,Click. That's the sound of never losing socks.,Click. Done.,S01,hack,0,REVEAL
+CL-04,B01,claude-baseline,hook,I had a whole basket of lonely socks.,My basket of shame,S02,confession,1,
+CL-05,B01,claude-baseline,hook,7:45 a.m. One sock. Zero matches.,One sock. Again.,S01,morning-rush,1,
+CL-06,B01,claude-baseline,hook,A tiny magnet ended my sock drama.,Sock drama: over,S01,hack,0,REVEAL
+CL-07,B01,claude-baseline,hook,Five pairs for $29 changed my laundry.,"5 pairs, $29",S02,math,0,PRICE
+CL-08,B01,claude-baseline,hook,I thought this sock thing was a gimmick.,I was so wrong,S02,skeptic,1,
+CL-09,B01,claude-baseline,hook,Socks that click together at the cuff. Finally.,They click together,S01,hack,0,REVEAL
+CL-10,B01,claude-baseline,hook,Raising three kids means losing three hundred socks a year.,300 socks a year,S02,parent,0,HOOK_VO_LEN
+CL-11,B01,claude-baseline,hook,Whose sock is this? Neither of ours.,Whose sock is this?,S02,relationship,0,
+CL-12,B01,claude-baseline,hook,I caught my washing machine stealing socks.,Caught in the act,S01,humor,1,

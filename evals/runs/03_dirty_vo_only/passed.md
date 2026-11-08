@@ -1,0 +1,30 @@
+# Passed variants
+
+20 of 20 variants passed (first round: 20 of 20).
+
+> Warning: source script SL_B05_skeptic: REVEAL - hook vo: 'magnets' reveals the product before the body does
+
+> Warning: source script SL_B05_skeptic: HOOK_VO_LEN - hook VO has 14 words (max 8, ~3 s): "ok so I thought socks with magnets were the dumbest thing on the internet"
+
+| variant_id | replaces | body_id | generator | round | angle | hook_vo | hook_on_screen | hook_shot | vo_rerecord | new_footage |
+|---|---|---|---|---|---|---|---|---|---|---|
+| SL_B05_skeptic-V01 |  | SL_B05_skeptic | mod-writer | 0 | skeptic | I thought these socks were a total joke. | Total joke, right? | S01 |  |  |
+| SL_B05_skeptic-V02 |  | SL_B05_skeptic | mod-writer | 0 | skeptic | Socks that never get lost? Sure, okay. | Yeah, sure. | S01 |  |  |
+| SL_B05_skeptic-V03 |  | SL_B05_skeptic | mod-writer | 0 | skeptic | I rolled my eyes so hard at these. | Eye roll incoming | S01 |  |  |
+| SL_B05_skeptic-V04 |  | SL_B05_skeptic | mod-writer | 0 | skeptic | Everyone kept posting these socks. I laughed. | I laughed. Hard. | S01 |  |  |
+| SL_B05_skeptic-V05 |  | SL_B05_skeptic | mod-writer | 0 | confession | Confession: I made fun of these socks. | I mocked these socks | S01 |  |  |
+| SL_B05_skeptic-V06 |  | SL_B05_skeptic | mod-writer | 0 | confession | Honestly? I judged these socks so hard. | I judged. Hard. | S01 |  |  |
+| SL_B05_skeptic-V07 |  | SL_B05_skeptic | mod-writer | 0 | question | Would you pay for socks that stay paired? | Would you? | S02 |  |  |
+| SL_B05_skeptic-V08 |  | SL_B05_skeptic | mod-writer | 0 | question | Ever seen socks that refuse to get lost? | Socks that won't vanish? | S02 |  |  |
+| SL_B05_skeptic-V09 |  | SL_B05_skeptic | mod-writer | 0 | mystery | Someone invented socks that can't go missing. | Socks that can't vanish | NEW: one lonely sock left in an empty dryer drum, slow push in |  | New footage needed - hook: one lonely sock left in an empty dryer drum, slow push in |
+| SL_B05_skeptic-V10 |  | SL_B05_skeptic | mod-writer | 0 | mystery | Apparently socks that never go missing exist. | Wait, these exist? | S01 |  |  |
+| SL_B05_skeptic-V11 |  | SL_B05_skeptic | mod-writer | 0 | humor | Socks with a buddy system. For adults. | Buddy system... for socks? | S01 |  |  |
+| SL_B05_skeptic-V12 |  | SL_B05_skeptic | mod-writer | 0 | humor | Someone made couples therapy for socks. Seriously. | Sock couples therapy? | S01 |  |  |
+| SL_B05_skeptic-V13 |  | SL_B05_skeptic | mod-writer | 0 | humor | A sock subscription. In this economy? | In this economy? | S01 |  |  |
+| SL_B05_skeptic-V14 |  | SL_B05_skeptic | mod-writer | 0 | morning-rush | 7:45, one sock, and an ad for these. | One sock. 7:45. | NEW: person half-dressed holding a single sock, glancing at the clock |  | New footage needed - hook: person half-dressed holding a single sock, glancing at the clock |
+| SL_B05_skeptic-V15 |  | SL_B05_skeptic | mod-writer | 0 | morning-rush | My coworker swore socks fixed her mornings. | Socks fixed her mornings? | S01 |  |  |
+| SL_B05_skeptic-V16 |  | SL_B05_skeptic | mod-writer | 0 | relationship | My girlfriend sent me a link to socks. | Babe, it's socks. | S01 |  |  |
+| SL_B05_skeptic-V17 |  | SL_B05_skeptic | mod-writer | 0 | relationship | My husband said we need special socks. | We need special socks? | S02 |  |  |
+| SL_B05_skeptic-V18 |  | SL_B05_skeptic | mod-writer | 0 | parent | My mom group chat is obsessed with these. | Mom chat is obsessed | S01 |  |  |
+| SL_B05_skeptic-V19 |  | SL_B05_skeptic | mod-writer | 0 | math | Paying for socks that just don't disappear? | Paying for this? | S02 |  |  |
+| SL_B05_skeptic-V20 |  | SL_B05_skeptic | mod-writer | 0 | math | Buying socks just so they stay paired? | Just to stay paired? | S02 |  |  |

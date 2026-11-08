@@ -1,0 +1,31 @@
+{
+  "total": 20,
+  "passed": 18,
+  "rejected": 2,
+  "superseded": 0,
+  "new_footage": 1,
+  "first_round_total": 20,
+  "first_round_passed": 18,
+  "by_generator": {
+    "mod-writer": {
+      "total": 20,
+      "passed": 18
+    }
+  },
+  "by_round": {
+    "0": {
+      "total": 20,
+      "passed": 18
+    }
+  },
+  "violations": {
+    "FLOW": 2
+  },
+  "flow": {
+    "file": "evals\\runs\\01_timecoded_v2\\flow.json",
+    "ok": 18,
+    "break": 2,
+    "unreviewed": []
+  },
+  "warnings": []
+}

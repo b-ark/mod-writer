@@ -1,0 +1,26 @@
+{
+  "total": 20,
+  "passed": 20,
+  "rejected": 0,
+  "superseded": 0,
+  "new_footage": 2,
+  "first_round_total": 20,
+  "first_round_passed": 20,
+  "by_generator": {
+    "mod-writer": {
+      "total": 20,
+      "passed": 20
+    }
+  },
+  "by_round": {
+    "0": {
+      "total": 20,
+      "passed": 20
+    }
+  },
+  "violations": {},
+  "warnings": [
+    "source script SL_B05_skeptic: REVEAL - hook vo: 'magnets' reveals the product before the body does",
+    "source script SL_B05_skeptic: HOOK_VO_LEN - hook VO has 14 words (max 8, ~3 s): \"ok so I thought socks with magnets were the dumbest thing on the internet\""
+  ]
+}

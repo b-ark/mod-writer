@@ -1,0 +1,25 @@
+{
+  "total": 21,
+  "passed": 19,
+  "rejected": 2,
+  "superseded": 0,
+  "new_footage": 1,
+  "first_round_total": 21,
+  "first_round_passed": 19,
+  "by_generator": {
+    "mod-writer": {
+      "total": 21,
+      "passed": 19
+    }
+  },
+  "by_round": {
+    "0": {
+      "total": 21,
+      "passed": 19
+    }
+  },
+  "violations": {
+    "HOOK_VO_LEN": 2
+  },
+  "warnings": []
+}
